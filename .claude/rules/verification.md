@@ -8,3 +8,5 @@
 - If `next dev` emits repeated `EMFILE` or `Watchpack` watcher errors, try `WATCHPACK_POLLING=true` before changing application code. Verify the page against `next build` + `next start` if watcher limits obscure the result.
 - Treat static checks as a floor. When behavior changes, verify the rendered result as well as source conformance.
 - Keep refresh and standards cleanup separate: context refresh can surface drift, but broader app or component cleanup should be reviewed explicitly.
+- **Mobile viewport**: For any UI change that touches layout, spacing, or full-width sections, take at least one screenshot at mobile (375px) using `preview_resize preset: "mobile"`. Desktop-only verification is insufficient — overflow and wrapping bugs only appear at small widths.
+- **Interactions**: When the change includes interactive elements (inputs, dropdowns, buttons, navigation), verify at least one key interaction path — type into a field, select an option, or click a button — and confirm the result renders correctly. A static screenshot alone is not enough.
