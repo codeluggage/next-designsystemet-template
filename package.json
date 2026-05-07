@@ -3,7 +3,8 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "WATCHPACK_POLLING=true next dev --turbopack",
+    "dev": "next dev --webpack",
+    "dev:emfile": "WATCHPACK_POLLING=true next dev --turbopack",
     "test": "tsx --test tests/*.test.ts",
     "build": "next build",
     "start": "next start",
